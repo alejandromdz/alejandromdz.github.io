@@ -18,6 +18,9 @@
   "homepage": "https://github.com/alejandromdz/alejandromdz.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
-  }
+    "gulp-sass": "^3.1.0",
+    "gulp-typescript": "^3.1.5",
+    "typescript": "^2.2.1"
+  },
+  "dependencies": {}
 }

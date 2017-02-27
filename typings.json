@@ -1,4 +1,10 @@
 {
   "name": "alejandromdz.github.io",
-  "dependencies": {}
+  "dependencies": {
+    "angular-ui-router": "registry:dt/angular-ui-router#1.1.5+20161222093745"
+  },
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20161101124950",
+    "jquery": "registry:dt/jquery#1.10.0+20170123093700"
+  }
 }
