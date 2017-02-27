@@ -1,0 +1,49 @@
+@import 'https://fonts.googleapis.com/css?family=Indie+Flower';
+
+$colors: #F2385A, #F5A503, #19af2F, #56D9CD, #3AA1BF;
+$max: length($colors);
+$dash:90;
+$dash-gap:0;
+$dash-space:$dash*($max - 1)+$dash-gap*$max;
+$time: 10s;
+$time-step:$time/$max;
+
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+h1{
+    font-family: Indie Flower;
+    font-size: 2.5rem;
+}
+nav{
+  background-color:rgb(62, 97, 113);
+}
+
+
+
+.text{
+ fill: none;
+  stroke-width: 3.2;
+  stroke-linejoin: round;
+  stroke-dasharray: $dash $dash-space;
+  stroke-dashoffset: 0;
+  animation: stroke $time infinite linear;
+
+@for $item from 1 through $max{
+  &:nth-child(#{$max}n+#{$item}){
+    $color:nth($colors,$item);
+    stroke:$color;
+    animation-delay:-($time-step*$item);
+  }
+}
+}
+
+@keyframes stroke{
+  100%{
+    stroke-dashoffset:-($dash+$dash-gap)*$max;
+  }
+}

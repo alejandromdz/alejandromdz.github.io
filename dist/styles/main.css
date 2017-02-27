@@ -1,0 +1,41 @@
+@import 'https://fonts.googleapis.com/css?family=Indie+Flower';
+body {
+  padding-top: 5rem; }
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center; }
+
+h1 {
+  font-family: Indie Flower;
+  font-size: 2.5rem; }
+
+nav {
+  background-color: #3e6171; }
+
+.text {
+  fill: none;
+  stroke-width: 3.2;
+  stroke-linejoin: round;
+  stroke-dasharray: 90 360;
+  stroke-dashoffset: 0;
+  animation: stroke 10s infinite linear; }
+  .text:nth-child(5n+1) {
+    stroke: #F2385A;
+    animation-delay: -2s; }
+  .text:nth-child(5n+2) {
+    stroke: #F5A503;
+    animation-delay: -4s; }
+  .text:nth-child(5n+3) {
+    stroke: #19af2F;
+    animation-delay: -6s; }
+  .text:nth-child(5n+4) {
+    stroke: #56D9CD;
+    animation-delay: -8s; }
+  .text:nth-child(5n+5) {
+    stroke: #3AA1BF;
+    animation-delay: -10s; }
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -450; } }
