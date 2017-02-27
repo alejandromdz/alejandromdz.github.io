@@ -9,6 +9,9 @@ body {
   padding: 3rem 1.5rem;
   text-align: center; }
 
+.blog-entries, .examples-entries {
+  padding: 3rem 1.5rem; }
+
 h1 {
   font-family: Indie Flower;
   font-size: 2.5rem; }

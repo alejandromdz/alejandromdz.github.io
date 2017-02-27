@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <base href="/">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
     crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -10,26 +11,27 @@
           crossorigin="anonymous"></script>
     <link rel="stylesheet" href="dist/styles/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="dist/scripts/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="dist/scripts/bundle.js"></script>
 </head>
 
-<body ng-app="myApp">
+<body ng-app="myApp" ng-controller="MainController">
   <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
       aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="">
+      <a class="navbar-brand" href="" ng-click="go('home')">
         <h1> AlejandroMdz.github.io</h1>
       </a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="">Examples</a>
+            <a class="nav-link" href="" ng-click="go('examples')">Examples</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Blog</a>
+            <a class="nav-link" href="" ng-click="go('blog')">Blog</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -40,31 +42,8 @@
   </nav>
 
   <div class="container">
-
-    <div class="starter-template">
-
-      <svg id="my-svg" xmlns="http://www.w3.org/2000/svg" width="360" height="85">
-        <symbol id="s-text">
-          <text x="25" y="80" font-family="Baloo" font-size="5rem">
-            Welcome
-          </text>
-        </symbol>
-        <use xlink:href="#s-text" class="text"></use>
-        <use xlink:href="#s-text" class="text"></use>
-        <use xlink:href="#s-text" class="text"></use>
-        <use xlink:href="#s-text" class="text"></use>
-        <use xlink:href="#s-text" class="text"></use>
-
-      </svg>
-      <br>
-      <p>Once you're here take a look into my blog</p>
-      <p>I'll put this pikachu GIF</p>
-      <img src="underconstruction.gif">
-      <p>... just because I can</p>
-    </div>
-
+<div class="app-view" ui-view></div>    
   </div>
-  <!-- /.container -->
 
 </body>
 
