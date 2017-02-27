@@ -1,15 +1,23 @@
 @import 'https://fonts.googleapis.com/css?family=Indie+Flower';
 
-$colors: #F2385A, #F5A503, #19af2F, #56D9CD, #3AA1BF;
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+$colors: #F2385A, #F5A503, #E9F1DF, #56D9CD, #3AA1BF;
 $max: length($colors);
-$dash:90;
-$dash-gap:0;
+$dash: 25;
+$dash-gap: 4;
 $dash-space:$dash*($max - 1)+$dash-gap*$max;
-$time: 10s;
+$time: 20s;
 $time-step:$time/$max;
 
 body {
   padding-top: 5rem;
+  background-color: #9e9e9e;
 }
 .starter-template {
   padding: 3rem 1.5rem;
@@ -27,14 +35,14 @@ nav{
 
 .text{
  fill: none;
-  stroke-width: 3.2;
+  stroke-width: 5;
   stroke-linejoin: round;
   stroke-dasharray: $dash $dash-space;
   stroke-dashoffset: 0;
   animation: stroke $time infinite linear;
 
 @for $item from 1 through $max{
-  &:nth-child(#{$max}n+#{$item}){
+  &:nth-child(#{$item + 1}){
     $color:nth($colors,$item);
     stroke:$color;
     animation-delay:-($time-step*$item);

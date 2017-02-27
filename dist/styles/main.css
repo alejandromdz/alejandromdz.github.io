@@ -1,6 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Indie+Flower';
 body {
-  padding-top: 5rem; }
+  padding-top: 5rem;
+  background-color: #9e9e9e; }
 
 .starter-template {
   padding: 3rem 1.5rem;
@@ -15,27 +16,27 @@ nav {
 
 .text {
   fill: none;
-  stroke-width: 3.2;
+  stroke-width: 5;
   stroke-linejoin: round;
-  stroke-dasharray: 90 360;
+  stroke-dasharray: 25 120;
   stroke-dashoffset: 0;
-  animation: stroke 10s infinite linear; }
-  .text:nth-child(5n+1) {
+  animation: stroke 20s infinite linear; }
+  .text:nth-child(2) {
     stroke: #F2385A;
-    animation-delay: -2s; }
-  .text:nth-child(5n+2) {
-    stroke: #F5A503;
     animation-delay: -4s; }
-  .text:nth-child(5n+3) {
-    stroke: #19af2F;
-    animation-delay: -6s; }
-  .text:nth-child(5n+4) {
-    stroke: #56D9CD;
+  .text:nth-child(3) {
+    stroke: #F5A503;
     animation-delay: -8s; }
-  .text:nth-child(5n+5) {
+  .text:nth-child(4) {
+    stroke: #E9F1DF;
+    animation-delay: -12s; }
+  .text:nth-child(5) {
+    stroke: #56D9CD;
+    animation-delay: -16s; }
+  .text:nth-child(6) {
     stroke: #3AA1BF;
-    animation-delay: -10s; }
+    animation-delay: -20s; }
 
 @keyframes stroke {
   100% {
-    stroke-dashoffset: -450; } }
+    stroke-dashoffset: -145; } }
