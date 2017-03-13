@@ -1,9 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Indie+Flower|Baloo|Amatic+SC';
 body {
-  padding-top: 5rem;
   background-color: rgba(96, 125, 139, 0.3);
   font-family: Amatic Sc;
-  font-size: 2rem; }
+  font-size: 1.8rem; }
 
 .starter-template {
   padding: 3rem 1.5rem;
@@ -12,36 +11,13 @@ body {
 .blog-entries, .examples-entries {
   padding: 3rem 1.5rem; }
 
+footer a, footer a:hover, footer a:active {
+  text-decoration: inherit;
+  color: inherit; }
+
 h1 {
   font-family: Indie Flower;
-  font-size: 2.5rem; }
+  font-size: 2rem; }
 
 nav {
   background-color: #3e6171; }
-
-.text {
-  fill: none;
-  stroke-width: 5;
-  stroke-linejoin: round;
-  stroke-dasharray: 25 120;
-  stroke-dashoffset: 0;
-  animation: stroke 20s infinite linear; }
-  .text:nth-child(2) {
-    stroke: #F2385A;
-    animation-delay: -4s; }
-  .text:nth-child(3) {
-    stroke: #F5A503;
-    animation-delay: -8s; }
-  .text:nth-child(4) {
-    stroke: #E9F1DF;
-    animation-delay: -12s; }
-  .text:nth-child(5) {
-    stroke: #56D9CD;
-    animation-delay: -16s; }
-  .text:nth-child(6) {
-    stroke: #3AA1BF;
-    animation-delay: -20s; }
-
-@keyframes stroke {
-  100% {
-    stroke-dashoffset: -145; } }

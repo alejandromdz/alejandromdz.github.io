@@ -1,25 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=Indie+Flower|Baloo|Amatic+SC';
 
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
-  }
-  #{$property}: $value;
-}
-
-$colors: #F2385A, #F5A503, #E9F1DF, #56D9CD, #3AA1BF;
-$max: length($colors);
-$dash: 25;
-$dash-gap: 4;
-$dash-space:$dash*($max - 1)+$dash-gap*$max;
-$time: 20s;
-$time-step:$time/$max;
 
 body {
-  padding-top: 5rem;
   background-color: rgba(96, 125, 139, 0.3);;
   font-family: Amatic Sc;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .starter-template{
   padding: 3rem 1.5rem;
@@ -28,35 +13,16 @@ body {
 .blog-entries,.examples-entries{
   padding: 3rem 1.5rem;
 }
+footer a, footer a:hover, footer a:active{
+  text-decoration: inherit;
+  color:inherit;
+}
 h1{
     font-family: Indie Flower;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 nav{
   background-color:rgb(62, 97, 113);
 }
 
 
-
-.text{
- fill: none;
-  stroke-width: 5;
-  stroke-linejoin: round;
-  stroke-dasharray: $dash $dash-space;
-  stroke-dashoffset: 0;
-  animation: stroke $time infinite linear;
-
-@for $item from 1 through $max{
-  &:nth-child(#{$item + 1}){
-    $color:nth($colors,$item);
-    stroke:$color;
-    animation-delay:-($time-step*$item);
-  }
-}
-}
-
-@keyframes stroke{
-  100%{
-    stroke-dashoffset:-($dash+$dash-gap)*$max;
-  }
-}
