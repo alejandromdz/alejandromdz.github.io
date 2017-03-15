@@ -125,19 +125,19 @@ body {
   padding: 3rem 1.5rem; }
 
 nav.main {
+  padding: 0;
   background: none;
   font-size: 1.5rem;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  color: white;
-  height: 80px; }
+  color: white; }
   nav.main a, nav.main a:hover, nav.main a:active {
     text-decoration: inherit;
     color: inherit; }
   nav.main p {
-    height: 100%;
     display: flex;
+    margin: 0;
     align-items: center; }
 
 .navbar-brand {
