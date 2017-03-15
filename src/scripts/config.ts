@@ -20,7 +20,7 @@ class Config {
                 templateProvider: function($http){
                     return $http.get('https://api.github.com/repos/alejandromdz/html_css_carroussel/contents/README.md', { data: { ref: 'master' } })
                         .then(function (response: any) {
-                            return md.renderInline(atob(response.data.content))
+                            return '<div class="article">'+md.render((atob(response.data.content)))+'</div>';
                         })
                 }
             })

@@ -1,4 +1,3 @@
-@import 'https://fonts.googleapis.com/css?family=Indie+Flower|Baloo|Amatic+SC';
 @font-face {
   font-family: "San Francisco";
   font-weight: 100;
@@ -110,26 +109,3 @@
     color: #7799bb; }
   .article .error {
     color: #AA0000; }
-
-body {
-  background-color: rgba(96, 125, 139, 0.3);
-  font-family: Amatic Sc;
-  font-size: 1.8rem; }
-
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center; }
-
-.blog-entries, .examples-entries {
-  padding: 3rem 1.5rem; }
-
-footer a, footer a:hover, footer a:active {
-  text-decoration: inherit;
-  color: inherit; }
-
-h1 {
-  font-family: Indie Flower;
-  font-size: 2rem; }
-
-nav {
-  background-color: #3e6171; }
