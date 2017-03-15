@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var MarkDownIt = require("markdown-it");
+var md = new MarkDownIt();
 var Config = (function () {
     function Config($stateProvider, $locationProvider) {
         $locationProvider.html5Mode(true);
@@ -12,6 +14,14 @@ var Config = (function () {
         })
             .state('examples', {
             templateUrl: 'dist/views/examples.html'
+        })
+            .state('html_css_carroussel', {
+            templateProvider: function ($http) {
+                return $http.get('https://api.github.com/repos/alejandromdz/html_css_carroussel/contents/README.md', { data: { ref: 'master' } })
+                    .then(function (response) {
+                    return md.renderInline(atob(response.data.content));
+                });
+            }
         });
     }
     return Config;
