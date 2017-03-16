@@ -112,7 +112,7 @@
     color: #AA0000; }
 
 body {
-  background-color: rgba(96, 125, 139, 0.3);
+  background-color: rgba(255, 193, 7, 0.65);
   font-family: Nunito;
   font-size: 1.8rem;
   overflow-x: hidden; }
@@ -148,7 +148,7 @@ nav.main {
 nav {
   font-family: Gidugu;
   font-size: 2.5rem;
-  background-color: rgba(30, 192, 233, 0.75); }
+  background-color: #4ac6e5; }
 
 .nav-link {
   padding: 0; }
@@ -238,7 +238,6 @@ nav.footer ul {
     transition: width 1s; }
 
 nav.footer ul li.active {
-  background-color: rgba(74, 121, 152, 0.35);
   transition: width 1s;
   width: 50%;
   color: green; }
