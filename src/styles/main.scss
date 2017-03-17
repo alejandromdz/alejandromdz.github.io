@@ -2,10 +2,11 @@
 @import 'san-francisco';
 
 body {
-  background-color: rgba(255, 193, 7, 0.65);;
+  background-color: rgba(127, 127, 127, 0.25);
   font-family: Nunito;
   font-size: 1.8rem;
   overflow-x: hidden;
+  color:#4b4b4b;
 }
 .starter-template{
   padding: 3rem 1.5rem;
@@ -22,7 +23,7 @@ nav.main{
   display:flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  color:white;
+  color:rgb(158, 158, 158);
   a, a:hover, a:active{
   text-decoration: inherit;
   color:inherit;
@@ -34,9 +35,6 @@ nav.main{
   }
 }
 
-
-
-
 .navbar-brand{
     font-family: Indie Flower;
     font-size: 1.5em;
@@ -45,7 +43,7 @@ nav.main{
 nav{
   font-family: Gidugu;
   font-size: 2.5rem;
-  background-color:rgb(74, 198, 229);
+  background-color:rgb(17, 135, 152);
 }
 .nav-link{
   padding:0;
@@ -138,5 +136,5 @@ nav.footer ul{
 nav.footer ul li.active{
   transition:width 1s;
   width:50%;
-  color:green;;
+  color:#e6ee9c;
 }
