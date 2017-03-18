@@ -238,8 +238,10 @@ nav.footer ul {
     justify-content: center;
     width: 25%;
     transition: width 1s; }
-
-nav.footer ul li.active {
-  transition: width 1s;
-  width: 50%;
-  color: #e6ee9c; }
+  nav.footer ul li.active {
+    transition: width 1s;
+    width: 35%;
+    color: #e6ee9c; }
+  nav.footer ul li:hover {
+    border-top: 4px solid white;
+    border-bottom: 4px solid transparent; }
