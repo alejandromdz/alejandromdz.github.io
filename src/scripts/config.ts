@@ -10,7 +10,7 @@ class Config {
             if ($location.$$search.carousel)
             { $state.go('html_css_carroussel'); }
             if ($location.$$absUrl === 'https://alejandromdz.github.io/html_css_carroussel')
-            { $window.open('https://alejandromdz.github.io/html_css_carroussel') }
+            { $window.location.href='https://alejandromdz.github.io/html_css_carroussel'; }
         }]);
         $stateProvider
             .state('home', {
