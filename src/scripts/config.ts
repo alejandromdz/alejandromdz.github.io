@@ -2,10 +2,13 @@ import * as MarkDownIt from 'markdown-it'
 const md = new MarkDownIt();
 
 class Config {
-    static $inject = ['$stateProvider', '$locationProvider']
-    constructor($stateProvider, $locationProvider) {
+    static $inject = ['$stateProvider', '$locationProvider','$urlRouterProvider']
+    constructor($stateProvider, $locationProvider,$urlRouterProvider) {
         $locationProvider.html5Mode(true);
-
+    $urlRouterProvider.when('/', ['$location','$state', function ($location,$state) {
+  if($location.$$search.carousel)
+   {$state.go('html_css_carroussel');}
+}]);
         $stateProvider
             .state('home', {
                 templateUrl: 'dist/views/home.html'
@@ -15,13 +18,6 @@ class Config {
             })
             .state('examples', {
                 templateUrl: 'dist/views/examples.html'
-            })
-            .state('html_css_carroussel_proxy',{
-                url:'/?carousel',
-                template:'',
-                onEnter:function($state){
-                    $state.go('html_css_carroussel')
-                }
             })
             .state('html_css_carroussel', {
                 url:'/carousel',
@@ -34,7 +30,7 @@ class Config {
                             return div;
                         })
                 },
-                onEnter: function ($state) {
+                onEnter: function () {
                     setTimeout(function () {
                         $('pre code').each(function (i, block) {
                             hljs.highlightBlock(block);

@@ -13,8 +13,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var MarkDownIt = require("markdown-it");
 var md = new MarkDownIt();
 var Config = (function () {
-    function Config($stateProvider, $locationProvider) {
+    function Config($stateProvider, $locationProvider, $urlRouterProvider) {
         $locationProvider.html5Mode(true);
+        $urlRouterProvider.when('/', ['$location', '$state', function ($location, $state) {
+                if ($location.$$search.carousel) {
+                    $state.go('html_css_carroussel');
+                }
+            }]);
         $stateProvider
             .state('home', {
             templateUrl: 'dist/views/home.html'
@@ -24,13 +29,6 @@ var Config = (function () {
         })
             .state('examples', {
             templateUrl: 'dist/views/examples.html'
-        })
-            .state('html_css_carroussel_proxy', {
-            url: '/?carousel',
-            template: '',
-            onEnter: function ($state) {
-                $state.go('html_css_carroussel');
-            }
         })
             .state('html_css_carroussel', {
             url: '/carousel',
@@ -43,7 +41,7 @@ var Config = (function () {
                     return div;
                 });
             },
-            onEnter: function ($state) {
+            onEnter: function () {
                 setTimeout(function () {
                     $('pre code').each(function (i, block) {
                         hljs.highlightBlock(block);
@@ -54,7 +52,7 @@ var Config = (function () {
     }
     return Config;
 }());
-Config.$inject = ['$stateProvider', '$locationProvider'];
+Config.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
 exports.default = Config;
 
 },{"markdown-it":8}],3:[function(require,module,exports){
