@@ -25,8 +25,15 @@ var Config = (function () {
             .state('examples', {
             templateUrl: 'dist/views/examples.html'
         })
+            .state('html_css_carroussel_proxy', {
+            url: '/?carousel',
+            template: '',
+            onEnter: function ($state) {
+                $state.go('html_css_carroussel');
+            }
+        })
             .state('html_css_carroussel', {
-            url: 'carousel',
+            url: '/carousel',
             templateProvider: function ($http) {
                 return $http.get('https://api.github.com/repos/alejandromdz/html_css_carroussel/contents/README.md', { data: { ref: 'master' } })
                     .then(function (response) {
@@ -36,7 +43,7 @@ var Config = (function () {
                     return div;
                 });
             },
-            onEnter: function () {
+            onEnter: function ($state) {
                 setTimeout(function () {
                     $('pre code').each(function (i, block) {
                         hljs.highlightBlock(block);
