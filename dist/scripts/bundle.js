@@ -15,9 +15,12 @@ var md = new MarkDownIt();
 var Config = (function () {
     function Config($stateProvider, $locationProvider, $urlRouterProvider) {
         $locationProvider.html5Mode(true);
-        $urlRouterProvider.when('/', ['$location', '$state', function ($location, $state) {
+        $urlRouterProvider.when('/', ['$location', '$state', '$window', function ($location, $state, $window) {
                 if ($location.$$search.carousel) {
                     $state.go('html_css_carroussel');
+                }
+                if ($location.$$absUrl === 'https://alejandromdz.github.io/html_css_carroussel') {
+                    $window.open('https://alejandromdz.github.io/html_css_carroussel');
                 }
             }]);
         $stateProvider
