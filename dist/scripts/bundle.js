@@ -32,18 +32,18 @@ var Config = (function () {
         })
             .state('html_css_carroussel', {
             url: '/carousel',
-            templateProvider: function ($http) {
-                return $http.get('https://api.github.com/repos/alejandromdz/html_css_carroussel/contents/README.md', { data: { ref: 'master' } })
-                    .then(function (response) {
-                    var div = document.createElement('div');
-                    div.classList.add('article');
-                    div.innerHTML = md.render((atob(response.data.content)));
-                    div.querySelectorAll('a').forEach(function (elem) {
-                        elem.setAttribute('target', '_self');
+            templateProvider: ['$http', function ($http) {
+                    return $http.get('https://api.github.com/repos/alejandromdz/html_css_carroussel/contents/README.md', { data: { ref: 'master' } })
+                        .then(function (response) {
+                        var div = document.createElement('div');
+                        div.classList.add('article');
+                        div.innerHTML = md.render((atob(response.data.content)));
+                        div.querySelectorAll('a').forEach(function (elem) {
+                            elem.setAttribute('target', '_self');
+                        });
+                        return div;
                     });
-                    return div;
-                });
-            },
+                }],
             onEnter: function () {
                 setTimeout(function () {
                     $('pre code').each(function (i, block) {

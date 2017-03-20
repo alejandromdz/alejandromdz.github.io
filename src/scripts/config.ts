@@ -21,7 +21,7 @@ class Config {
             })
             .state('html_css_carroussel', {
                 url: '/carousel',
-                templateProvider: function ($http) {
+                templateProvider: ['$http',function ($http) {
                     return $http.get('https://api.github.com/repos/alejandromdz/html_css_carroussel/contents/README.md', { data: { ref: 'master' } })
                         .then(function (response: any) {
                             var div = document.createElement('div');
@@ -32,7 +32,7 @@ class Config {
                             });
                             return div; 
                         })
-                },
+                }],
                 onEnter: function () {
                     setTimeout(function () {
                         $('pre code').each(function (i, block) {

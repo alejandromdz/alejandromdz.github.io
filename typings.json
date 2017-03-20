@@ -6,6 +6,7 @@
   },
   "globalDependencies": {
     "angular": "registry:dt/angular#1.5.0+20161101124950",
+    "highlight.js": "registry:dt/highlight.js#9.1.0+20161227120821",
     "jquery": "registry:dt/jquery#1.10.0+20170123093700"
   }
 }
