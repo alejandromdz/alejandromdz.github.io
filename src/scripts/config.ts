@@ -6,11 +6,8 @@ class Config {
     constructor($stateProvider, $locationProvider, $urlRouterProvider) {
         $locationProvider.html5Mode(true);
         $urlRouterProvider.when('/', ['$location', '$state', '$window', function ($location, $state, $window: ng.IWindowService) {
-
             if ($location.$$search.carousel)
             { $state.go('html_css_carroussel'); }
-            if ($location.$$absUrl === 'https://alejandromdz.github.io/html_css_carroussel')
-            { $window.location.reload(true) }
         }]);
         $stateProvider
             .state('home', {
@@ -29,8 +26,11 @@ class Config {
                         .then(function (response: any) {
                             var div = document.createElement('div');
                             div.classList.add('article');
-                            div.innerHTML = md.render((atob(response.data.content)))
-                            return div;
+                            div.innerHTML = md.render((atob(response.data.content)));
+                            div.querySelectorAll('a').forEach(function(elem:HTMLAnchorElement){
+                                elem.setAttribute('target','_self');
+                            });
+                            return div; 
                         })
                 },
                 onEnter: function () {

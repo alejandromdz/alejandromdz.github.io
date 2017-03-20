@@ -19,9 +19,6 @@ var Config = (function () {
                 if ($location.$$search.carousel) {
                     $state.go('html_css_carroussel');
                 }
-                if ($location.$$absUrl === 'https://alejandromdz.github.io/html_css_carroussel') {
-                    $window.location.reload(true);
-                }
             }]);
         $stateProvider
             .state('home', {
@@ -41,6 +38,9 @@ var Config = (function () {
                     var div = document.createElement('div');
                     div.classList.add('article');
                     div.innerHTML = md.render((atob(response.data.content)));
+                    div.querySelectorAll('a').forEach(function (elem) {
+                        elem.setAttribute('target', '_self');
+                    });
                     return div;
                 });
             },
