@@ -1,8 +1,20 @@
 @import 'https://fonts.googleapis.com/css?family=Nunito|Indie+Flower|Gidugu';
 @import 'san-francisco';
-
+a,a:active,a:hover{
+  color:#546e7a;
+  text-decoration: none;
+}
+.examples-entries, .blog-entries{
+ul{
+  list-style:none;
+}
+li:before{
+  font: normal normal normal 30px FontAwesome;
+  content:'\f105';
+}
+}
 body {
-  background-color: rgba(127, 127, 127, 0.25);
+  background-color: rgba(96, 125, 139, 0.45);
   font-family: Nunito;
   font-size: 1.8rem;
   overflow-x: hidden;
@@ -33,13 +45,14 @@ nav.main{
     margin:0;
     align-items: center;
   }
-}
-
-.navbar-brand{
+  .navbar-brand{
     font-family: Indie Flower;
     font-size: 1.5em;
-    color:white;
+    color:#00BCD4;
 }
+}
+
+
 nav{
   font-family: Gidugu;
   font-size: 2.5rem;

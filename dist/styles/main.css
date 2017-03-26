@@ -112,8 +112,19 @@
   .article .error {
     color: #AA0000; }
 
+a, a:active, a:hover {
+  color: #546e7a;
+  text-decoration: none; }
+
+.examples-entries ul, .blog-entries ul {
+  list-style: none; }
+
+.examples-entries li:before, .blog-entries li:before {
+  font: normal normal normal 30px FontAwesome;
+  content: '\f105'; }
+
 body {
-  background-color: rgba(127, 127, 127, 0.25);
+  background-color: rgba(96, 125, 139, 0.45);
   font-family: Nunito;
   font-size: 1.8rem;
   overflow-x: hidden;
@@ -141,11 +152,10 @@ nav.main {
     display: flex;
     margin: 0;
     align-items: center; }
-
-.navbar-brand {
-  font-family: Indie Flower;
-  font-size: 1.5em;
-  color: white; }
+  nav.main .navbar-brand {
+    font-family: Indie Flower;
+    font-size: 1.5em;
+    color: #00BCD4; }
 
 nav {
   font-family: Gidugu;
