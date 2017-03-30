@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Nunito|Indie+Flower|Gidugu';
 @import 'san-francisco';
-a,a:active,a:hover{
-  color:#546e7a;
+a,a:active,a:hover,a:focus{
+  color:black;
   text-decoration: none;
 }
 .examples-entries, .blog-entries{
@@ -11,14 +11,14 @@ ul{
 li:before{
   font: normal normal normal 30px FontAwesome;
   content:'\f105';
+  color:rgb(108, 141, 143);
 }
 }
 body {
-  background-color: rgba(96, 125, 139, 0.45);
   font-family: Nunito;
   font-size: 1.8rem;
   overflow-x: hidden;
-  color:#4b4b4b;
+  color:rgb(39, 45, 48);
 }
 .starter-template{
   padding: 3rem 1.5rem;
@@ -35,7 +35,6 @@ nav.main{
   display:flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  color:rgb(158, 158, 158);
   margin-bottom: 15px;
   a, a:hover, a:active{
   text-decoration: inherit;
@@ -60,7 +59,7 @@ nav.main{
 nav{
   font-family: Gidugu;
   font-size: 2.5rem;
-  background-color:rgb(17, 135, 152);
+  background-color:#ff5b5b;
 }
 .nav-link{
   padding:0;
@@ -152,7 +151,7 @@ nav.footer ul{
   li.active{
   transition:width 1s;
   width:35%;
-  color:#e6ee9c;
+  color:rgb(39, 45, 48);
 }
 li:hover{
   border-top:4px solid white;
