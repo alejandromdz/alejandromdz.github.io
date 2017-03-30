@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Nunito|Indie+Flower|Gidugu';
+@import 'https://fonts.googleapis.com/css?family=Nunito|Comfortaa|Gidugu';
 @import 'san-francisco';
 a,a:active,a:hover,a:focus{
   color:black;
@@ -49,9 +49,12 @@ nav.main{
     align-items: center;
   }
   a.navbar-brand, a.navbar-brand:hover, a.navbar-brand:active{
-    font-family: Indie Flower;
-    font-size: 1.5em;
-    color:black;
+    font-family: Comfortaa;
+    font-size: 1.3em;
+    color:#aaa;
+    .highlight{
+      color: #5d91ba
+    }
 }
 }
 

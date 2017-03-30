@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Nunito|Indie+Flower|Gidugu';
+@import 'https://fonts.googleapis.com/css?family=Nunito|Comfortaa|Gidugu';
 @font-face {
   font-family: "San Francisco";
   font-weight: 100;
@@ -155,9 +155,11 @@ nav.main {
     margin: 0;
     align-items: center; }
   nav.main a.navbar-brand, nav.main a.navbar-brand:hover, nav.main a.navbar-brand:active {
-    font-family: Indie Flower;
-    font-size: 1.5em;
-    color: black; }
+    font-family: Comfortaa;
+    font-size: 1.3em;
+    color: #aaa; }
+    nav.main a.navbar-brand .highlight, nav.main a.navbar-brand:hover .highlight, nav.main a.navbar-brand:active .highlight {
+      color: #5d91ba; }
 
 nav {
   font-family: Gidugu;
