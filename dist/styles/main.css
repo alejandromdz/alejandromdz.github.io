@@ -156,7 +156,7 @@ nav.main {
     align-items: center; }
   nav.main a.navbar-brand, nav.main a.navbar-brand:hover, nav.main a.navbar-brand:active {
     font-family: Comfortaa;
-    font-size: 1.3em;
+    font-size: 1em;
     color: #aaa; }
     nav.main a.navbar-brand .highlight, nav.main a.navbar-brand:hover .highlight, nav.main a.navbar-brand:active .highlight {
       color: #5d91ba; }
@@ -164,7 +164,7 @@ nav.main {
 nav {
   font-family: Gidugu;
   font-size: 2.5rem;
-  background-color: #ff5b5b; }
+  background-color: #38566e; }
 
 .nav-link {
   padding: 0; }
@@ -255,7 +255,7 @@ nav.footer ul {
   nav.footer ul li.active {
     transition: width 1s;
     width: 35%;
-    color: #272d30; }
+    color: #c1a98a; }
   nav.footer ul li:hover {
     border-top: 4px solid white;
     border-bottom: 4px solid transparent; }

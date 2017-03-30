@@ -50,7 +50,7 @@ nav.main{
   }
   a.navbar-brand, a.navbar-brand:hover, a.navbar-brand:active{
     font-family: Comfortaa;
-    font-size: 1.3em;
+    font-size: 1em;
     color:#aaa;
     .highlight{
       color: #5d91ba
@@ -62,7 +62,7 @@ nav.main{
 nav{
   font-family: Gidugu;
   font-size: 2.5rem;
-  background-color:#ff5b5b;
+  background-color:#38566e;
 }
 .nav-link{
   padding:0;
@@ -154,7 +154,7 @@ nav.footer ul{
   li.active{
   transition:width 1s;
   width:35%;
-  color:rgb(39, 45, 48);
+  color:#c1a98a
 }
 li:hover{
   border-top:4px solid white;
