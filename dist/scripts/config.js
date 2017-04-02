@@ -48,7 +48,7 @@ var Config = (function () {
             .state('html_css_carroussel', {
             url: '/carousel',
             templateProvider: ['$http', function ($http) {
-                    return $http.get('https://api.github.com/repos/alejandromdz/html_css_carroussel/contents/README.md', { data: { ref: 'master' } })
+                    return $http.get('https://api.github.com/repos/alejandromdz/blog/contents/html-css-carousel.md', { data: { ref: 'master' } })
                         .then(function (response) {
                         var div = document.createElement('div');
                         div.classList.add('article');
