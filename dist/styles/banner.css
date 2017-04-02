@@ -1,0 +1,41 @@
+.starter-template {
+  font-family: San Francisco;
+  margin-bottom: 40px; }
+  .starter-template a {
+    color: #6495ed; }
+  .starter-template a:hover, .starter-template a:active, .starter-template a:focus {
+    color: #4273cb; }
+
+#main-banner {
+  padding: 50px;
+  font-family: monospace;
+  font-size: 0.6em;
+  color: white;
+  height: 600px;
+  background-image: url("../../icons.svg"), url("../../background.svg");
+  background-size: contain,contain;
+  margin-left: calc(50% - 50vw);
+  background-repeat: no-repeat,no-repeat;
+  width: 100vw;
+  height: 65vw; }
+
+.input {
+  -webkit-animation: blinker 1.5s step-end infinite;
+  animation: blinker 1.5s step-end infinite; }
+
+@media (min-width: 992px) {
+  #main-banner {
+    color: white;
+    background-size: cover,cover; } }
+
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.0; } }
+
+@keyframes blinker {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.0; } }
