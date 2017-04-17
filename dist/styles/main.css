@@ -1,5 +1,4 @@
 @import 'https://fonts.googleapis.com/css?family=Nunito|Comfortaa|Gidugu';
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
 @font-face {
   font-family: "San Francisco";
   font-weight: 100;
@@ -218,7 +217,6 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
   margin: 50px auto 100px auto; }
 
 input {
-  font-family: 'Lato', sans-serif;
   font-size: 0.875em;
   width: 470px;
   height: 50px;
@@ -246,7 +244,6 @@ textarea {
   background: transparent;
   outline: none;
   color: #726659;
-  font-family: 'Lato', sans-serif;
   font-size: 0.875em;
   border: solid 1px #b3aca7;
   transition: all 0.3s ease-in-out;
